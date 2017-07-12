@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
 
 
 
-            string fileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\LR Utilities\\LR Signature Editor\\logrhythm-company-signature-201706.raw";
+            string fileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\LR Utilities\\LR Signature Editor\\logrhythm-company-signature-201707.raw";
             /*if (!File.Exists(fileName))
             {
                //fileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Signatures\\logrhythm-company-signature-201706.raw";
@@ -131,7 +131,8 @@ namespace WindowsFormsApplication1
             Close();
             
         }
-
+        
+       
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -238,6 +239,11 @@ namespace WindowsFormsApplication1
                 textBox_MP.Text = "XXX-XXX-XXXX";
                 textBox_MP.ForeColor = System.Drawing.Color.Silver;
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

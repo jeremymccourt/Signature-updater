@@ -53,7 +53,7 @@
             // textBox_FN
             // 
             this.textBox_FN.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_FN.Location = new System.Drawing.Point(103, 196);
+            this.textBox_FN.Location = new System.Drawing.Point(118, 134);
             this.textBox_FN.Name = "textBox_FN";
             this.textBox_FN.Size = new System.Drawing.Size(212, 20);
             this.textBox_FN.TabIndex = 3;
@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 199);
+            this.label1.Location = new System.Drawing.Point(55, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 241);
+            this.label3.Location = new System.Drawing.Point(65, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
@@ -84,7 +84,7 @@
             // textBox_JT
             // 
             this.textBox_JT.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_JT.Location = new System.Drawing.Point(103, 238);
+            this.textBox_JT.Location = new System.Drawing.Point(118, 176);
             this.textBox_JT.Name = "textBox_JT";
             this.textBox_JT.Size = new System.Drawing.Size(212, 20);
             this.textBox_JT.TabIndex = 5;
@@ -95,7 +95,7 @@
             // textBox_WP
             // 
             this.textBox_WP.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_WP.Location = new System.Drawing.Point(103, 279);
+            this.textBox_WP.Location = new System.Drawing.Point(118, 217);
             this.textBox_WP.Name = "textBox_WP";
             this.textBox_WP.Size = new System.Drawing.Size(212, 20);
             this.textBox_WP.TabIndex = 7;
@@ -106,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 282);
+            this.label4.Location = new System.Drawing.Point(45, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 6;
@@ -115,7 +115,7 @@
             // textBox_MP
             // 
             this.textBox_MP.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_MP.Location = new System.Drawing.Point(103, 320);
+            this.textBox_MP.Location = new System.Drawing.Point(118, 258);
             this.textBox_MP.Name = "textBox_MP";
             this.textBox_MP.Size = new System.Drawing.Size(212, 20);
             this.textBox_MP.TabIndex = 9;
@@ -126,7 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 323);
+            this.label5.Location = new System.Drawing.Point(40, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 8;
@@ -134,7 +134,7 @@
             // 
             // button_reset
             // 
-            this.button_reset.Location = new System.Drawing.Point(103, 375);
+            this.button_reset.Location = new System.Drawing.Point(118, 313);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(75, 23);
             this.button_reset.TabIndex = 11;
@@ -144,7 +144,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(236, 375);
+            this.button2.Location = new System.Drawing.Point(251, 313);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -176,7 +176,7 @@
             // textBox_status
             // 
             this.textBox_status.Enabled = false;
-            this.textBox_status.Location = new System.Drawing.Point(53, 422);
+            this.textBox_status.Location = new System.Drawing.Point(68, 360);
             this.textBox_status.Name = "textBox_status";
             this.textBox_status.ReadOnly = true;
             this.textBox_status.Size = new System.Drawing.Size(308, 20);
@@ -185,7 +185,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 425);
+            this.label8.Location = new System.Drawing.Point(17, 363);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 15;
@@ -194,18 +194,21 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(68, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 55);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 159);
+            this.label10.Location = new System.Drawing.Point(22, 97);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 13);
             this.label10.TabIndex = 19;
@@ -214,7 +217,7 @@
             // textBox_presig
             // 
             this.textBox_presig.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_presig.Location = new System.Drawing.Point(103, 156);
+            this.textBox_presig.Location = new System.Drawing.Point(118, 94);
             this.textBox_presig.Name = "textBox_presig";
             this.textBox_presig.Size = new System.Drawing.Size(212, 20);
             this.textBox_presig.TabIndex = 2;
@@ -235,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(433, 464);
+            this.ClientSize = new System.Drawing.Size(433, 408);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox_presig);
             this.Controls.Add(this.label10);
@@ -254,6 +257,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_FN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Sigupdate";
             this.Text = "Signature Editor";
             this.Load += new System.EventHandler(this.Form1_Load);
