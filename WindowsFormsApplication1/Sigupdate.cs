@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
             if (textBox_WP.Text == "XXX-XXX-XXXX")
             { textBox_WP.Text = ""; }
             if (textBox_MP.Text == "XXX-XXX-XXXX")
-            { textBox_WP.Text = ""; }
+            { textBox_MP.Text = ""; }
             //
             var content = File.ReadAllText(fileName);
             //Replace all values in the HTML
