@@ -57,13 +57,18 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox_presig.Text = "";
-            textBox_FN.Text = "";
-           // textBox_LN.Text = "";
-            textBox_JT.Text = "";
-            textBox_WP.Text = "";
-            textBox_MP.Text = "";
-            textBox_postsig.Text = "";
+            textBox_presig.Text = "-Salutations-";
+            textBox_presig.ForeColor = System.Drawing.Color.Silver;
+            textBox_FN.Text = "Full Name";
+            textBox_FN.ForeColor = System.Drawing.Color.Silver;
+            // textBox_LN.Text = "";
+            textBox_JT.Text = "Job Title";
+            textBox_JT.ForeColor = System.Drawing.Color.Silver;
+            textBox_WP.Text = "XXX-XXX-XXXX";
+            textBox_WP.ForeColor = System.Drawing.Color.Silver;
+            textBox_MP.Text = "XXX-XXX-XXXX";
+            textBox_MP.ForeColor = System.Drawing.Color.Silver;
+            //textBox_postsig.Text = "";
 
         }
 
@@ -88,6 +93,17 @@ namespace WindowsFormsApplication1
                 Directory.CreateDirectory(fileNameOut_PATH);
             }
 
+            // check for default values witht he cue-texts, and if they are still default, assign them to null. 
+            if (textBox_presig.Text == "-Salutations-")
+            { textBox_presig.Text = ""; }
+            if (textBox_FN.Text == "Full Name")
+            { textBox_FN.Text = ""; }
+            if (textBox_JT.Text == "Job Title")
+            { textBox_JT.Text = ""; }
+            if (textBox_WP.Text == "XXX-XXX-XXXX")
+            { textBox_WP.Text = ""; }
+            if (textBox_MP.Text == "XXX-XXX-XXXX")
+            { textBox_WP.Text = ""; }
             //
             var content = File.ReadAllText(fileName);
             //Replace all values in the HTML
@@ -102,7 +118,7 @@ namespace WindowsFormsApplication1
             { textBox_MP.Text += " (M)"; }
             content = content.Replace("{MOBILE_PHONE}", textBox_MP.Text);
 
-            content = content.Replace("{POSTSIG}", textBox_postsig.Text);
+           // content = content.Replace("{POSTSIG}", textBox_postsig.Text);
 
             //Write new HTML string to file
             File.WriteAllText(fileNameOut, content);
@@ -128,6 +144,100 @@ namespace WindowsFormsApplication1
 
         private void label9_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox_presig_Enter(object sender, EventArgs e)
+        {
+            if (textBox_presig.Text == "-Salutations-")
+            { textBox_presig.Text = "";
+                textBox_presig.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void textBox_presig_Leave(object sender, EventArgs e)
+        {
+            if (textBox_presig.Text == "")
+            {
+                textBox_presig.Text = "-Salutations-";
+                textBox_presig.ForeColor = System.Drawing.Color.Silver;
+            }
+        }
+
+        private void textBox_FN_Enter(object sender, EventArgs e)
+        {
+            if (textBox_FN.Text == "Full Name")
+            {
+                textBox_FN.Text = "";
+                textBox_FN.ForeColor = System.Drawing.Color.Black;
+            }
+
+        }
+
+        private void textBox_FN_Leave(object sender, EventArgs e)
+        {
+            if (textBox_FN.Text == "")
+            {
+                textBox_FN.Text = "Full Name";
+                textBox_FN.ForeColor = System.Drawing.Color.Silver;
+            }
+
+        }
+
+        private void textBox_JT_Enter(object sender, EventArgs e)
+        {
+            if (textBox_JT.Text == "Job Title")
+            {
+                textBox_JT.Text = "";
+                textBox_JT.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void textBox_JT_Leave(object sender, EventArgs e)
+        {
+            if (textBox_JT.Text == "")
+            {
+                textBox_JT.Text = "Job Title";
+                textBox_JT.ForeColor = System.Drawing.Color.Silver;
+            }
+        }
+
+        private void textBox_WP_Enter(object sender, EventArgs e)
+        {
+            if (textBox_WP.Text == "XXX-XXX-XXXX")
+            {
+                textBox_WP.Text = "";
+                textBox_WP.ForeColor = System.Drawing.Color.Black;
+            }
+
+        }
+
+        private void textBox_WP_Leave(object sender, EventArgs e)
+        {
+            if (textBox_WP.Text == "")
+            {
+                textBox_WP.Text = "XXX-XXX-XXXX";
+                textBox_WP.ForeColor = System.Drawing.Color.Silver;
+            }
+
+        }
+
+        private void textBox_MP_Enter(object sender, EventArgs e)
+        {
+            if (textBox_MP.Text == "XXX-XXX-XXXX")
+            {
+                textBox_MP.Text = "";
+                textBox_MP.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void textBox_MP_Leave(object sender, EventArgs e)
+        {
+            if (textBox_MP.Text == "")
+            {
+                textBox_MP.Text = "XXX-XXX-XXXX";
+                textBox_MP.ForeColor = System.Drawing.Color.Silver;
+            }
 
         }
     }

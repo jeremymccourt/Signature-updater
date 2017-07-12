@@ -46,15 +46,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_presig = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_FN
             // 
+            this.textBox_FN.ForeColor = System.Drawing.Color.Silver;
             this.textBox_FN.Location = new System.Drawing.Point(103, 196);
             this.textBox_FN.Name = "textBox_FN";
             this.textBox_FN.Size = new System.Drawing.Size(212, 20);
-            this.textBox_FN.TabIndex = 2;
+            this.textBox_FN.TabIndex = 3;
+            this.textBox_FN.Text = "Full Name";
+            this.textBox_FN.Enter += new System.EventHandler(this.textBox_FN_Enter);
+            this.textBox_FN.Leave += new System.EventHandler(this.textBox_FN_Leave);
             // 
             // label1
             // 
@@ -78,17 +83,25 @@
             // 
             // textBox_JT
             // 
+            this.textBox_JT.ForeColor = System.Drawing.Color.Silver;
             this.textBox_JT.Location = new System.Drawing.Point(103, 238);
             this.textBox_JT.Name = "textBox_JT";
             this.textBox_JT.Size = new System.Drawing.Size(212, 20);
             this.textBox_JT.TabIndex = 5;
+            this.textBox_JT.Text = "Job Title";
+            this.textBox_JT.Enter += new System.EventHandler(this.textBox_JT_Enter);
+            this.textBox_JT.Leave += new System.EventHandler(this.textBox_JT_Leave);
             // 
             // textBox_WP
             // 
+            this.textBox_WP.ForeColor = System.Drawing.Color.Silver;
             this.textBox_WP.Location = new System.Drawing.Point(103, 279);
             this.textBox_WP.Name = "textBox_WP";
             this.textBox_WP.Size = new System.Drawing.Size(212, 20);
             this.textBox_WP.TabIndex = 7;
+            this.textBox_WP.Text = "XXX-XXX-XXXX";
+            this.textBox_WP.Enter += new System.EventHandler(this.textBox_WP_Enter);
+            this.textBox_WP.Leave += new System.EventHandler(this.textBox_WP_Leave);
             // 
             // label4
             // 
@@ -101,10 +114,14 @@
             // 
             // textBox_MP
             // 
+            this.textBox_MP.ForeColor = System.Drawing.Color.Silver;
             this.textBox_MP.Location = new System.Drawing.Point(103, 320);
             this.textBox_MP.Name = "textBox_MP";
             this.textBox_MP.Size = new System.Drawing.Size(212, 20);
             this.textBox_MP.TabIndex = 9;
+            this.textBox_MP.Text = "XXX-XXX-XXXX";
+            this.textBox_MP.Enter += new System.EventHandler(this.textBox_MP_Enter);
+            this.textBox_MP.Leave += new System.EventHandler(this.textBox_MP_Leave);
             // 
             // label5
             // 
@@ -196,11 +213,22 @@
             // 
             // textBox_presig
             // 
+            this.textBox_presig.ForeColor = System.Drawing.Color.Silver;
             this.textBox_presig.Location = new System.Drawing.Point(103, 156);
             this.textBox_presig.Name = "textBox_presig";
             this.textBox_presig.Size = new System.Drawing.Size(212, 20);
-            this.textBox_presig.TabIndex = 1;
-            this.textBox_presig.Text = "test";
+            this.textBox_presig.TabIndex = 2;
+            this.textBox_presig.Text = "-Salutations-";
+            this.textBox_presig.Enter += new System.EventHandler(this.textBox_presig_Enter);
+            this.textBox_presig.Leave += new System.EventHandler(this.textBox_presig_Leave);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(1, 1);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // Sigupdate
             // 
@@ -208,6 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(433, 464);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox_presig);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
@@ -253,6 +282,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox_presig;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
