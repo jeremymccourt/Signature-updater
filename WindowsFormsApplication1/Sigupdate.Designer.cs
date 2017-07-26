@@ -47,6 +47,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_presig = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox_postsig = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +136,7 @@
             // 
             // button_reset
             // 
-            this.button_reset.Location = new System.Drawing.Point(118, 313);
+            this.button_reset.Location = new System.Drawing.Point(118, 387);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(75, 23);
             this.button_reset.TabIndex = 11;
@@ -144,7 +146,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(251, 313);
+            this.button2.Location = new System.Drawing.Point(251, 387);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -170,13 +172,13 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 24);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Updater V1.0.2";
+            this.label7.Text = "Updater V1.0.3";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox_status
             // 
             this.textBox_status.Enabled = false;
-            this.textBox_status.Location = new System.Drawing.Point(68, 360);
+            this.textBox_status.Location = new System.Drawing.Point(68, 434);
             this.textBox_status.Name = "textBox_status";
             this.textBox_status.ReadOnly = true;
             this.textBox_status.Size = new System.Drawing.Size(308, 20);
@@ -185,7 +187,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 363);
+            this.label8.Location = new System.Drawing.Point(17, 437);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 15;
@@ -194,11 +196,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(68, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 55);
             this.pictureBox1.TabIndex = 16;
@@ -233,12 +234,35 @@
             this.textBox1.Size = new System.Drawing.Size(1, 20);
             this.textBox1.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 299);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Post-signature text";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // richTextBox_postsig
+            // 
+            this.richTextBox_postsig.ForeColor = System.Drawing.Color.Silver;
+            this.richTextBox_postsig.Location = new System.Drawing.Point(118, 299);
+            this.richTextBox_postsig.Name = "richTextBox_postsig";
+            this.richTextBox_postsig.Size = new System.Drawing.Size(212, 46);
+            this.richTextBox_postsig.TabIndex = 10;
+            this.richTextBox_postsig.Text = "-Disclaimer-";
+            this.richTextBox_postsig.Enter += new System.EventHandler(this.richTextBox_postsig_Enter);
+            this.richTextBox_postsig.Leave += new System.EventHandler(this.richTextBox_postsig_Leave);
+            // 
             // Sigupdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(433, 408);
+            this.ClientSize = new System.Drawing.Size(433, 466);
+            this.Controls.Add(this.richTextBox_postsig);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox_presig);
             this.Controls.Add(this.label10);
@@ -258,6 +282,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_FN);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Sigupdate";
             this.Text = "Signature Editor";
@@ -288,6 +313,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox_presig;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox_postsig;
     }
 }
 

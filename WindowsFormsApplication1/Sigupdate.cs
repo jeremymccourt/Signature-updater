@@ -32,8 +32,11 @@ namespace WindowsFormsApplication1
         public Sigupdate()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+           
+
         }
-       
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -49,9 +52,8 @@ namespace WindowsFormsApplication1
         {
             
 
-            
 
-           
+
 
         }
 
@@ -68,7 +70,9 @@ namespace WindowsFormsApplication1
             textBox_WP.ForeColor = System.Drawing.Color.Silver;
             textBox_MP.Text = "XXX-XXX-XXXX";
             textBox_MP.ForeColor = System.Drawing.Color.Silver;
-            //textBox_postsig.Text = "";
+            richTextBox_postsig.Text = "-Disclaimer-";
+            richTextBox_postsig.ForeColor = System.Drawing.Color.Silver;
+
 
         }
 
@@ -85,7 +89,7 @@ namespace WindowsFormsApplication1
             }
             */
 
-            string fileNameOut = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Signatures\\logrhythm-signature-201706.htm";
+            string fileNameOut = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Signatures\\logrhythm-signature-201707.htm";
             string fileNameOut_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Signatures";
             //Read HTML from file
             if (!Directory.Exists(fileNameOut_PATH))
@@ -104,6 +108,9 @@ namespace WindowsFormsApplication1
             { textBox_WP.Text = ""; }
             if (textBox_MP.Text == "XXX-XXX-XXXX")
             { textBox_MP.Text = ""; }
+            if (richTextBox_postsig.Text == "-Disclaimer-")
+            { richTextBox_postsig.Text = ""; }
+
             //
             var content = File.ReadAllText(fileName);
             //Replace all values in the HTML
@@ -112,13 +119,13 @@ namespace WindowsFormsApplication1
             //content = content.Replace("{LAST_NAME}", textBox_LN.Text); // Changed first_name, and last_name to full_name
             content = content.Replace("{JOB_TITLE}", textBox_JT.Text);
             if (textBox_WP.Text.Length > 5 )
-            { textBox_WP.Text += " (W)"; }
+            { textBox_WP.Text += " (w) &nbsp"; }
             content = content.Replace("{WORK_PHONE}", textBox_WP.Text);
             if (textBox_MP.Text.Length > 5)
-            { textBox_MP.Text += " (M)"; }
+            {textBox_MP.Text += " (m)"; }
             content = content.Replace("{MOBILE_PHONE}", textBox_MP.Text);
 
-           // content = content.Replace("{POSTSIG}", textBox_postsig.Text);
+            content = content.Replace("{POSTSIG}", richTextBox_postsig.Text);
 
             //Write new HTML string to file
             File.WriteAllText(fileNameOut, content);
@@ -245,6 +252,40 @@ namespace WindowsFormsApplication1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
+        private void textBox_postsig_Leave(object sender, EventArgs e)
+        {
+            if (richTextBox_postsig.Text == "")
+            {
+                richTextBox_postsig.Text = "-Disclaimer-";
+                richTextBox_postsig.ForeColor = System.Drawing.Color.Silver;
+            }
+        }
+
+        private void richTextBox_postsig_Enter(object sender, EventArgs e)
+        {
+            if (richTextBox_postsig.Text == "-Disclaimer-")
+            {
+                richTextBox_postsig.Text = "";
+                richTextBox_postsig.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void richTextBox_postsig_Leave(object sender, EventArgs e)
+        {
+            if (richTextBox_postsig.Text == "")
+            {
+                richTextBox_postsig.Text = "-Disclaimer-";
+                richTextBox_postsig.ForeColor = System.Drawing.Color.Silver;
+            }
         }
     }
 }
